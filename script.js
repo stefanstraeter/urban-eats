@@ -14,9 +14,9 @@ const dishesContainer = document.getElementById('dishesContent');
 function renderAllDishes() {
   let dishesHtml = '';
 
-  dishes.forEach(category => {
-    const id = generateCategoryId(category.category)
-    dishesHtml += createDishesHtml(category, id);
+  dishes.forEach(categoryObj => {
+    const id = generateCategoryId(categoryObj.categoryName)
+    dishesHtml += createDishesHtml(categoryObj, id);
   });
 
   contentRef.innerHTML = dishesHtml;

@@ -1,6 +1,6 @@
 let dishes = [
     {
-        category: "Bento Boxes",
+        categoryName: "Bento Boxes",
         items: [
             {
                 id: "bento-teriyaki",
@@ -42,7 +42,7 @@ let dishes = [
         ]
     },
     {
-        category: "Noodles & Bowls",
+        categoryName: "Noodles & Bowls",
         items: [
             {
                 id: "noodle-drift",
@@ -83,7 +83,7 @@ let dishes = [
         ]
     },
     {
-        category: "Sushi",
+        categoryName: "Sushi",
         items: [
             {
                 id: "sushi-drift",
@@ -124,7 +124,7 @@ let dishes = [
         ]
     },
     {
-        category: "Drinks",
+        categoryName: "Drinks",
         items: [
             {
                 id: "drink-matcha",

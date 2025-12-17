@@ -1,7 +1,7 @@
 
-function createDishesHtml(categoryDishes, id) {
+function createDishesHtml(categoryObj, sectionId) {
   let itemsHTML = '';
-  categoryDishes.items.forEach(item => {
+  categoryObj.items.forEach(item => {
     itemsHTML += `
       <div class="dishes-content__card">
         <img class="dishes-content__card-img" src="${item.src}" />
@@ -21,8 +21,8 @@ function createDishesHtml(categoryDishes, id) {
   });
 
   return `
-    <section class="dishes-content__category mt-2xl" id="${id}">
-      <h2 class="dishes-content__category-title">${categoryDishes.category}</h2>
+    <section class="dishes-content__category mt-2xl" id="${sectionId}">
+      <h2 class="dishes-content__category-title">${categoryObj.categoryName}</h2>
       ${itemsHTML}
     </section>
   `;
