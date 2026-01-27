@@ -19,7 +19,7 @@ Urban Eats is a modern, interactive online food ordering application built with 
 
 ### Mockup
 
-![Urban Eats Screenshot](assets/img/assets/img/Urban-Eats-Mockup.jpg)
+![Urban Eats Screenshot](assets/img/urbanEats_mockup.jpg)
 
 ---
 
