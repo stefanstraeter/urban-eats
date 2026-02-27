@@ -63,7 +63,9 @@
     max-height: 0;
     opacity: 0;
     transform: translateY(-10px);
-    transition: transform 0.4s ease, opacity 0.4s ease;
+    transition:
+      transform 0.4s ease,
+      opacity 0.4s ease;
     pointer-events: none;
   }
 
@@ -212,7 +214,10 @@
   border-radius: 2.6rem;
   padding: 1.2rem 4rem;
   font-size: 1.6rem;
-  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, transform 0.2s ease;
+  transition:
+    background-color 0.4s ease-in-out,
+    color 0.4s ease-in-out,
+    transform 0.2s ease;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -236,13 +241,17 @@
   border-width: 0.1rem;
   color: var(--Slate-500);
   border-color: var(--Slate-500);
-  transition: background-color 0.1s ease-out, transform 0.3s ease;
+  transition:
+    background-color 0.1s ease-out,
+    transform 0.3s ease;
   cursor: pointer;
 }
 
 .dishes-content__card-button:hover {
   background-color: var(--Red);
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease-in-out,
+    transform 0.3s ease;
 }
 
 .dishes-content__card-button--clicked {
@@ -256,17 +265,17 @@
 @media (max-width: 57.5rem) {
   .navbar-header__cart-button {
     position: fixed;
-    bottom: 0;
-    left: 0;
+    bottom: 1rem;
+    left: 70%;
+    transform: translateX(-50%);
     margin: 0;
-    width: 100%;
-    border-radius: 0;
+    width: 50%;
+    border-radius: 2.6rem;
     padding: 1.2rem;
     justify-content: center;
     font-size: 1.6rem;
     font-weight: var(--font-weight-800);
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
-    z-index: 1000;
     background: var(--Red);
     color: var(--White);
   }
@@ -324,7 +333,9 @@
   font-size: clamp(1.6rem, 1.8vw, 2rem);
   font-weight: var(--font-weight-700);
   text-decoration: none;
-  transition: color 0.2s ease-in-out, transform 0.2s ease;
+  transition:
+    color 0.2s ease-in-out,
+    transform 0.2s ease;
 }
 
 .restaurant-nav a:hover {
