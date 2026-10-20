@@ -1,123 +1,96 @@
-# URBANEATS – Modern Food Delivery App
+<div align="center">
 
-A dynamic food ordering app built with Vanilla JavaScript.
+# URBANEATS
 
-Browse menus, manage a real-time shopping cart, and switch between delivery and pickup with instant price updates – all directly in the browser.
+**Browse the menu, fill your cart and watch the price update with every click.**
 
-🔗 **Live Demo:** https://stefanstraeter.github.io/urban-eats/
+HTML5 · CSS3 · Vanilla JavaScript
 
----
+[Live demo](https://stefanstraeter.github.io/urban-eats/) · [Report a bug](https://github.com/stefanstraeter/urban-eats/issues)
 
-## Preview
+<br />
 
-![UrbanEats Preview](assets/img/urbanEats_mockup.jpg)
+![UrbanEats preview](assets/img/urbanEats_mockup.jpg)
 
----
-
-## Features
-
-- Dynamic menu rendering from a central data source
-- Real-time shopping cart with live price calculation
-- Delivery vs. pickup toggle with dynamic fee updates
-- Persistent cart using Local Storage
-- Quantity management (+ / -) with validation
-- Minimum order logic
-- Responsive design with mobile-first approach
+</div>
 
 ---
 
-## Purpose
+## About
 
-This project was developed as part of a frontend training program at the Developer Akademie.
+UrbanEats is a mobile-first food ordering app. Browse the menu, add dishes to your cart and switch between delivery and pickup. Totals, fees and the cart badge update instantly, all in the browser and without a framework.
 
-It demonstrates how a real-world e-commerce-like application can be built using Vanilla JavaScript without frameworks.
-
-Focus areas include:
-
-- dynamic DOM rendering from structured data
-- client-side state management (shopping cart logic)
-- persistent data handling using Local Storage
-- building interactive UI flows with immediate feedback
+It started as a training project at the Developer Akademie and shows how an e-commerce-like flow can be built with plain JavaScript: data, templates and logic are kept apart, and the cart survives a page reload.
 
 ---
 
-## Getting Started
+## Highlights
 
-Clone the repository:
-
-```id="z7x2qa"
-git clone https://github.com/stefanstraeter/urban-eats
-cd urban-eats
-```
-
-Run the project using a local development server (e.g. VS Code Live Server).
+- **Data-driven menu** – Every category and dish is rendered from one central data source, no hard-coded markup.
+- **Live cart** – Adding, removing and changing quantities (+ / −) updates the list, the totals and the badge immediately.
+- **Delivery or pickup** – One toggle switches the mode and recalculates the delivery fee on the spot.
+- **Minimum order logic** – The order button respects the minimum order value.
+- **Persistent cart** – The cart is saved in `localStorage` and restored on the next visit.
+- **Order confirmation** – After ordering, the cart is cleared and a short overlay confirms it.
+- **Responsive and accessible** – Mobile-first layout with a slide-in cart, a burger menu and `aria-label`s on icon buttons.
 
 ---
 
 ## Tech Stack
 
-- HTML5
-- CSS3 (Flexbox, Grid, responsive design)
-- Vanilla JavaScript
-- Local Storage
+- **HTML5** with semantic structure
+- **CSS3** with Flexbox, Grid and a modular file setup
+- **Vanilla JavaScript** with template functions for rendering
+- **Local Storage** for the cart
 
 ---
 
-## Project Structure
+## Getting Started
 
-```id="v1m8ls"
-scripts/
-  db.js
-  template.js
-script.js
-styles/
+```bash
+git clone https://github.com/stefanstraeter/urban-eats && cd urban-eats
 ```
 
-- **scripts/db.js** – Data layer containing dishes, categories, and pricing
-- **scripts/template.js** – UI rendering via template functions
-- **script.js** – Main logic (cart, events, state handling)
-- **styles/** – Modular CSS (layout, components, responsiveness)
+There is no build step. Open `index.html` with a local server, for example the VS Code Live Server extension.
 
----
+<details>
+<summary><strong>Project structure</strong></summary>
 
-## Architecture Highlights
+<br />
 
-- **Data-Driven UI**
-  The entire menu is generated dynamically from a central data structure.
+```text
+├── index.html
+├── script.js             # Cart logic, events, state, Local Storage
+├── scripts/
+│   ├── db.js             # Data layer: dishes, categories, prices
+│   └── template.js       # HTML template functions
+├── styles/               # Modular CSS (cart, components, fonts, footer, reset)
+├── style.css             # Base layout
+└── assets/               # Images, icons, fonts, gif
+```
 
-- **Client-Side State Management**
-  Cart state is managed in JavaScript and synchronized with Local Storage.
+| File                  | Responsibility                           |
+| --------------------- | ---------------------------------------- |
+| `scripts/db.js`       | What is on the menu                      |
+| `scripts/template.js` | How it looks                             |
+| `script.js`           | What happens when the user interacts     |
 
-- **Separation of Concerns**
-  Clear distinction between data, UI templates, and application logic.
+</details>
 
-- **Real-Time UI Updates**
-  Immediate feedback on user interactions (cart updates, pricing, toggles).
+<details>
+<summary><strong>Technical challenges</strong></summary>
 
----
+<br />
 
-## Technical Challenges
+- **Cart state** – Keeping the cart array, the rendered UI and `localStorage` in sync after every change.
+- **Price calculation** – Subtotal, delivery fee and minimum order value must stay consistent when the mode or quantities change.
+- **UI synchronization** – Cart list, totals and badge all re-render from the same state, so nothing drifts apart.
+- **Responsive UX** – The cart is a side panel on desktop and a slide-in overlay on mobile.
 
-### Cart State Management
-
-Keeping cart data consistent across UI, calculations, and Local Storage.
-
-### Dynamic Price Calculation
-
-Handling delivery fees, minimum order values, and live updates without inconsistencies.
-
-### UI Synchronization
-
-Ensuring all components reflect the current state after each interaction.
-
-### Responsive UX Design
-
-Designing a smooth ordering experience across mobile and desktop devices.
+</details>
 
 ---
 
 ## Author
 
-**Stefan Straeter**
-
-GitHub: https://github.com/stefanstraeter/
+**Stefan Sträter** · [github.com/stefanstraeter](https://github.com/stefanstraeter/)
